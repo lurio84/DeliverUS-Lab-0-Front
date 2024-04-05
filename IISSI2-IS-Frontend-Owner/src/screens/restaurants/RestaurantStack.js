@@ -7,13 +7,19 @@ const Stack = createNativeStackNavigator()
 
 export default function RestaurantsStack () {
   return (
-        <Stack.Navigator>
-            <Stack.Screen
-                name='RestaurantsScreen'
-                component={RestaurantsScreen} />
-            <Stack.Screen
-                name='RestaurantDetailScreen'
-                component={RestaurantDetailScreen} />
-        </Stack.Navigator>
+    <Stack.Navigator>
+      <Stack.Screen
+          name='RestaurantsScreen'
+          component={RestaurantsScreen}
+          options={{
+            title: 'Restaurants'
+          }}/>
+      <Stack.Screen
+          name='RestaurantDetailScreen'
+          component={RestaurantDetailScreen}
+          options={{
+            title: 'Restaurant Detail'
+          }}/>
+    </Stack.Navigator>
   )
 }
